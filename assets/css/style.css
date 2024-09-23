@@ -22,6 +22,7 @@ body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   transition: 1s;
+  background-color: #E5E5E5;
 }
 
 h3.section__header {
@@ -224,10 +225,10 @@ input::placeholder {
   transform: translate(-50%, 50%);
   font-size: 1.5rem;
   padding: 8px 5px;
-  color: var(--text-dark);
+  color: #E5E5E5;
   background-color: var(--primary-color);
   border-radius: 2em;
-  border: 8px solid var(--white);
+  border: 8px solid #E5E5E5;
 }
 
 .section__container {
@@ -489,6 +490,16 @@ input::placeholder {
   gap: 4rem 1rem;
 }
 
+.story__grid img {
+  transition: 0.3s;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.story__grid img:hover {
+  filter: brightness(70%);
+}
+
 .story__date {
   margin: 2rem 0 2rem 0;
   padding-bottom: 1rem;
@@ -735,6 +746,48 @@ footer {
 
 .header-container-darkmode::before {
   background-color: #A16129 !important;
+}
+
+.border-scroll {
+  background-color: #A16129;
+  color: #202020 !important;
+  border: 10px solid #202020 !important;
+}
+
+.btn-darkmode {
+  background-color: #A16129 !important;
+  color: white !important;
+}
+
+.btn-darkmode:hover {
+  background-color: #202020 !important;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) !important;
+}
+
+.icons {
+  color: white !important;
+}
+
+.icons:hover {
+  color: var(--primary-color) !important;
+}
+
+.storygrid-span-darkmode {
+  color: orange !important;
+  border-right: 2px solid var(--white) !important;
+}
+
+.storygrid-p-darkmode {
+  color: white !important;
+  opacity: 0.8;
+}
+
+.download-container-darkmode {
+  background-color: #A16129 !important;
+}
+
+.storydate-darkmode {
+  border-bottom: 2px solid var(--white) !important;
 }
 
 @keyframes scroll {

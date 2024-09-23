@@ -73,6 +73,7 @@ const price = ["225", "455", "275", "625", "395"];
 const priceEl = document.querySelector('#select-price');
 const swiperLeft = document.querySelectorAll('.swiper-button-prev');
 const swiperRight = document.querySelectorAll('.swiper-button-next');
+
 function updateSwiper(event, args) {
         const index = args && args[0].realIndex;
         priceEl.textContent = price[index];
@@ -166,7 +167,15 @@ const btns = document.querySelector('nav button');
 const headerContainer = document.querySelector(".header-container");
 
 const rideSection = document.querySelector('#ride');
+const scrollDown = document.querySelector('.scroll_down');
 
+const h4Titles = document.querySelectorAll('h4');
+const storyGridSpan = document.querySelectorAll('.story__grid span');
+
+const storyGridText = document.querySelectorAll('.story__grid p');
+
+const downloadContainer = document.querySelector('.download__container');
+const storyDate = document.querySelector('.story__date');
 darkModeIcon.addEventListener('click', () => {
     body.classList.toggle('body_darkmode');
     header.classList.toggle('header__darkmode');
@@ -174,10 +183,30 @@ darkModeIcon.addEventListener('click', () => {
     h1.classList.toggle("white-darkmode");
     headerForm.classList.toggle("form_darkmode");
 
-    btns.classList.toggle("btn-darkmode");
-    headerContainer.classList.toggle("header-container-darkmode");
+    btns.classList.toggle('btn-darkmode');
+    headerContainer.classList.toggle('header-container-darkmode');
 
+    scrollDown.classList.toggle('border-scroll');
     rideSection.classList.toggle('header__darkmode');
+
+    downloadContainer.classList.toggle('download-container-darkmode');
+    storyDate.classList.toggle('storydate-darkmode');
+
+    if(darkModeIcon.classList.contains("ri-moon-line")) {
+        darkModeIcon.classList.toggle("ri-sun-line");
+    }
+    swiperLeft.forEach(item => {
+        item.classList.toggle('icons');
+    })
+
+    swiperRight.forEach(item => {
+        item.classList.toggle('icons');
+    })
+
+    h4Titles.forEach(item => {
+        item.classList.toggle('white-darkmode');
+    })
+
     titles.forEach(item => {
         item.classList.toggle('section__header-darkmode');
     });
@@ -187,10 +216,18 @@ darkModeIcon.addEventListener('click', () => {
     });
 
     headerLabel.forEach(item => {
-        item.classList.toggle("white-darkmode");
+        item.classList.toggle('white-darkmode');
     });
 
     headerInputs.forEach(item => {
-        item.classList.toggle("input_darkmode");
+        item.classList.toggle('input_darkmode');
     });
+
+    storyGridSpan.forEach(item => {
+        item.classList.toggle('storygrid-span-darkmode');
+    });
+
+    storyGridText.forEach(item => {
+        item.classList.toggle('storygrid-p-darkmode');
+    })
 })
