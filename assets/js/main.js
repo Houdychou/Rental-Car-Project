@@ -175,13 +175,14 @@ const storyGridSpan = document.querySelectorAll('.story__grid span');
 const storyGridText = document.querySelectorAll('.story__grid p');
 
 const downloadContainer = document.querySelector('.download__container');
-const storyDate = document.querySelector('.story__date');
+const storyDate = document.querySelectorAll('.story__date');
+
 darkModeIcon.addEventListener('click', () => {
     body.classList.toggle('body_darkmode');
     header.classList.toggle('header__darkmode');
 
-    h1.classList.toggle("white-darkmode");
-    headerForm.classList.toggle("form_darkmode");
+    h1.classList.toggle('white-darkmode');
+    headerForm.classList.toggle('form_darkmode');
 
     btns.classList.toggle('btn-darkmode');
     headerContainer.classList.toggle('header-container-darkmode');
@@ -190,11 +191,16 @@ darkModeIcon.addEventListener('click', () => {
     rideSection.classList.toggle('header__darkmode');
 
     downloadContainer.classList.toggle('download-container-darkmode');
-    storyDate.classList.toggle('storydate-darkmode');
+
+    storyDate.forEach(item => {
+        item.classList.toggle('storydate-darkmode');
+    })
 
     if(darkModeIcon.classList.contains("ri-moon-line")) {
         darkModeIcon.classList.toggle("ri-sun-line");
+        darkModeIcon.classList.toggle('white-darkmode');
     }
+
     swiperLeft.forEach(item => {
         item.classList.toggle('icons');
     })

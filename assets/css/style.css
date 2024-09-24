@@ -25,6 +25,10 @@ body {
   background-color: #E5E5E5;
 }
 
+h1 {
+  transition: 0.7s;
+}
+
 h3.section__header {
   text-align: left;
 }
@@ -43,6 +47,10 @@ nav {
   isolation: isolate;
   width: 100%;
   z-index: 9;
+}
+
+.darkmode i {
+  color: white;
 }
 
 img {
@@ -973,6 +981,11 @@ footer {
   .footer__container {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .darkmode i {
+    color: black;
+  }
+  
 }
 
 @media screen and (min-width: 1024px) {

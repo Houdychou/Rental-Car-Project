@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/cars.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav_header">
+                <div class="nav_logo">
+                    <a href="#">RENTAL</a>
+                </div>
+                <div class="nav_menu_btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav_links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#about">Rent</a></li>
+                <li><a href="#ride">Ride</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="darkmode"><i class="ri-moon-line"></i></li>
+            </ul>
+            <div class="nav_btn">
+                <button class="btn">Get Started</button>
+            </div>
+        </nav>
+        <div class="header-container">
+            <h1>Select Your Car</h1>
+            <form>
+                <div class="input_group">
+                  <label for="location">Enter the name of the car brand</label>
+                  <input type="text" name="location" id="location" placeholder="Ex: Bmw" required>
+                </div>
+                <button class="btn">
+                  <i class="ri-search-line"></i>
+                </button>
+              </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="section__container range__container">
+            <div class="carousel flickity-enabled is-draggable"
+              data-flickity='{ "freeScroll": true }'>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script src="../assets/js/cars.js"></script>
+    <script src="../assets/js/header.js"></script>
+</body>
+
+</html>
