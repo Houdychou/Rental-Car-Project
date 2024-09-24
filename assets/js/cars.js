@@ -2,7 +2,7 @@ const carouselWrapper = document.querySelector('.carousel');
 fetch("../assets/json/cars.json")
     .then((res) => res.json())
     .then((data) => {
-        let imgCar = data.cars[0].carsImg;
+        const imgCar = data.cars[0].carsImg;
         const flickitySlider = document.querySelector('.flickity-slider');
         
         // Boucle pour ajouter les images
