@@ -41,6 +41,5 @@ darkModeIcon.addEventListener('click', () => {
 
     if(darkModeIcon.classList.contains("ri-moon-line")) {
         darkModeIcon.classList.toggle("ri-sun-line");
-        darkModeIcon.classList.toggle('white-darkmode');
     }
 });

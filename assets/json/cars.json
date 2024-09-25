@@ -1,9 +1,10 @@
 {
     "cars": [
         {
-          "name": "bmw",
-          "series": "BMW 3-series",
+          "brand": "bmw",
+          "name": "BMW 3-series",
           "milage": "34.9mpg",
+          "logo": "/assets/img/banner-5.png",
           "kmh": "230 km/h",
           "seats": "5 seats",
           "gearbox": "Automatic, 8 speed",
@@ -24,9 +25,10 @@
           ]
         },
         {
-          "name": "bmw",
-          "series": "BMW 3-series",
+          "brand": "bmw",
+          "name": "BMW 3-series",
           "milage": "34.9mpg",
+          "logo": "/assets/img/banner-5.png",
           "kmh": "230 km/h",
           "seats": "5 seats",
           "gearbox": "Automatic, 8 speed",

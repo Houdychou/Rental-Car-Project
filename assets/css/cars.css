@@ -1,3 +1,8 @@
+:root {
+  --black: black;
+  --white: white;
+}
+
 header .header-container label {
   font-size: 1.2rem;
 }
@@ -11,43 +16,61 @@ body {
 }
 
 .section__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid_vehicle_wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas:
-    ". a a ."
-    ". a a .";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.carousel {
-  grid-area: a;
-  align-self: center;
-  justify-self: center;
-  width: 400px;
-  background: transparent;
+.carousel-vehicle {
+  position: relative;
 }
 
-.carousel-cell {
-  width: 100%;
-  height: 100%;
-  margin-right: 10px;
-  background: transparent;
-  border-radius: 5px;
+.next, .prev {
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 50%;
+  font-size: 24px;
+  color: var(--black);
+  padding: 8px;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-}
-
-.flickity-viewport {
-  height: 300px !important;
+.next:hover, .prev:hover {
+  border-radius: 50%;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .next {
-  right: -50px !important;
+  position: absolute;
+  border: 1px solid --black;
+  background-color: var(--white);
+  right: 10px;
+  top: 20%;
 }
 
-.previous {
-  left: -50px !important;
+.prev {
+  position: absolute;
+  border: 1px solid --black;
+  background-color: var(--white);
+  left: 10px;
+  top: 20%;
+}
+
+.car-wrapper {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.41) !important;
+}
+
+.carousel-vehicle img {
+  border-radius: 2px;
+}
+
+.car-stats .car-brand img {
+  height: 100px;
+  width: 100px;
 }
