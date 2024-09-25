@@ -31,7 +31,20 @@
           "seats": "5 seats",
           "gearbox": "Automatic, 8 speed",
           "price": "150/mo",
-          "imgFront": "bmw-img/bmw-serie3-touring-front.jpg"
+          "carsImg": [
+            {
+              "img": "/bmw-img/bmw-serie3-touring-front.jpg"
+            },
+            {
+              "img": "/bmw-img/bmw-serie3-touring-back.jpg"
+            },
+            {
+              "img": "/bmw-img/bmw-serie3-touring-aside.jpg"
+            },
+            {
+              "img": "/bmw-img/bmw-serie3-touring-interior.jpg"
+            }
+          ]
         }
     ]
 }
