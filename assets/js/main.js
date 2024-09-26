@@ -151,22 +151,9 @@ ScrollReveal().reveal(".download__links", {
     delay: 1000,
 });
 
-const darkModeIcon = document.querySelector('.darkmode i');
-const body = document.querySelector('body');
-const header = document.querySelector('header');
-
-const titles = document.querySelectorAll('.section__header');
-const headerLinks = document.querySelectorAll("header a");
-const h1 = document.querySelector('h1');
-
-const headerForm = document.querySelector('header form');
-const headerLabel = document.querySelectorAll('label');
-const headerInputs = document.querySelectorAll('header input');
-
 const btns = document.querySelector('nav button');
 const headerContainer = document.querySelector(".header-container");
 
-const rideSection = document.querySelector('#ride');
 const scrollDown = document.querySelector('.scroll_down');
 
 const h4Titles = document.querySelectorAll('h4');
@@ -177,24 +164,29 @@ const storyGridText = document.querySelectorAll('.story__grid p');
 const downloadContainer = document.querySelector('.download__container');
 const storyDate = document.querySelectorAll('.story__date');
 
+const selectContainer = document.querySelector('#ride');
 
 darkModeIcon.addEventListener('click', () => {
     btns.classList.toggle('btn-darkmode');
+
     headerContainer.classList.toggle('header-container-darkmode');
 
     scrollDown.classList.toggle('border-scroll');
-    rideSection.classList.toggle('header__darkmode');
+    
+    selectContainer.classList.toggle('header__darkmode');
 
     downloadContainer.classList.toggle('download-container-darkmode');
+    swiperRight.forEach(item => {
+        item.classList.toggle('white-darkmode');
+    });
+
+    swiperLeft.forEach(item => {
+        item.classList.toggle('white-darkmode');
+    });
 
     storyDate.forEach(item => {
         item.classList.toggle('storydate-darkmode');
     });
-
-    if(darkModeIcon.classList.contains("ri-moon-line")) {
-        darkModeIcon.classList.toggle("ri-sun-line");
-        darkModeIcon.classList.toggle('white-darkmode');
-    }
 
     swiperLeft.forEach(item => {
         item.classList.toggle('icons');
@@ -212,19 +204,11 @@ darkModeIcon.addEventListener('click', () => {
         item.classList.toggle('section__header-darkmode');
     });
 
-    headerLabel.forEach(item => {
-        item.classList.toggle('white-darkmode');
-    });
-
-    headerInputs.forEach(item => {
-        item.classList.toggle('input_darkmode');
-    });
-
     storyGridSpan.forEach(item => {
         item.classList.toggle('storygrid-span-darkmode');
     });
 
     storyGridText.forEach(item => {
         item.classList.toggle('storygrid-p-darkmode');
-    })
+    });
 })

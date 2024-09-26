@@ -24,7 +24,7 @@ darkModeIcon.addEventListener('click', () => {
 
     h1.classList.toggle('white-darkmode');
     darkModeIcon.classList.toggle('white-darkmode');
-    headerForm.classList.toggle("form_darkmode");
+    headerForm.classList.toggle('form_darkmode');
 
     headerLinks.forEach(item => {
         ul.classList.remove('open');
@@ -39,7 +39,17 @@ darkModeIcon.addEventListener('click', () => {
         item.classList.toggle('input_darkmode');
     });
 
-    if(darkModeIcon.classList.contains("ri-moon-line")) {
-        darkModeIcon.classList.toggle("ri-sun-line");
+    titles.forEach(item => {
+        item.classList.toggle('white-darkmode');
+    })
+
+    if(darkModeIcon.classList.contains('ri-moon-line')) {
+        darkModeIcon.classList.remove('ri-moon-line');
+        darkModeIcon.classList.add('ri-sun-line');
+        darkModeIcon.classList.add('white-darkmode');
+    } else {
+        darkModeIcon.classList.add('ri-moon-line');
+        darkModeIcon.classList.remove('ri-sun-line');
+        darkModeIcon.classList.remove('white-darkmode');
     }
 });

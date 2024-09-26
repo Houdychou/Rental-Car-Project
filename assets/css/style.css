@@ -218,7 +218,7 @@ input::placeholder {
   width: 100vw;
   height: 50%;
   background-color: var(--primary-color-dark);
-  transform: translateY(50%) skewY(-8deg);
+  transform: translateY(50%) skewY(-5deg);
   z-index: -1;
 }
 

@@ -2,7 +2,7 @@
     "cars": [
         {
           "brand": "bmw",
-          "name": "BMW 3-series",
+          "name": "BMW 3-series-touring",
           "milage": "34.9mpg",
           "logo": "/assets/img/banner-5.png",
           "kmh": "230 km/h",
@@ -26,25 +26,25 @@
         },
         {
           "brand": "bmw",
-          "name": "BMW 3-series",
+          "name": "BMW M440i coupe",
           "milage": "34.9mpg",
           "logo": "/assets/img/banner-5.png",
-          "kmh": "230 km/h",
-          "seats": "5 seats",
+          "kmh": "250 km/h",
+          "seats": "4 seats",
           "gearbox": "Automatic, 8 speed",
           "price": "150/mo",
           "carsImg": [
             {
-              "img": "/bmw-img/bmw-serie3-touring-front.jpg"
+              "img": "/bmw-img/bmw-m440i-coupe-exterior.jpg"
             },
             {
-              "img": "/bmw-img/bmw-serie3-touring-back.jpg"
+              "img": "/bmw-img/bmw-m440i-coupe-road.jpg"
             },
             {
-              "img": "/bmw-img/bmw-serie3-touring-aside.jpg"
+              "img": "/bmw-img/bmw-m440i-coupe-interior.jpg"
             },
             {
-              "img": "/bmw-img/bmw-serie3-touring-interior.jpg"
+              "img": "/bmw-img/bmw-m440i-coupe-backseats.jpg"
             }
           ]
         }

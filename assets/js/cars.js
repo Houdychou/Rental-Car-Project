@@ -8,7 +8,6 @@ fetch("/assets/json/cars.json")
 .then((data) => {
     console.log(data);
     for(let i = 0; i < data.cars.length; i++) {
-        let sumMax = data.cars[i].carsImg.length;
         const carsWrapper = document.createElement('div');
         gridWrapper.appendChild(carsWrapper);
         carsWrapper.classList.add('car-wrapper');
@@ -30,33 +29,15 @@ fetch("/assets/json/cars.json")
 
         carsImg.src = data.cars[i].carsImg[0].img;
 
-        rightArrow.addEventListener('click', () => {
-            sumMin++;
-            if(sumMin === 3) {
-                carsImg.src = data.cars[i].carsImg[sumMin].img;
-            }
-            if (sumMin >= 4) {
-                sumMin = 0;
-                carsImg.src = data.cars[i].carsImg[sumMin].img;
-            } else {
-                console.log(sumMin);
-                carsImg.src = data.cars[i].carsImg[sumMin].img;
-            }
-        });
+        const imgWrapper = document.createElement('div');
+        imgWrapper.classList.add('img-wrapper');
+        carsWrapper.appendChild(imgWrapper);
 
-        leftArrow.addEventListener('click', () => {
-            sumMax--;
-            if(sumMax === 0) {
-                carsImg.src = data.cars[i].carsImg[sumMax].img;
-            }
-            if (sumMax <= 0) {
-                sumMax = 4;
-                carsImg.src = data.cars[i].carsImg[sumMax].img;
-            } else {
-                console.log(sumMax);
-                carsImg.src = data.cars[i].carsImg[sumMax].img;
-            }
-        })
+        for(let j = 0; j < data.cars[i].carsImg.length; j++) {
+            const allCarsImg = document.createElement('img');
+            imgWrapper.appendChild(allCarsImg);
+            allCarsImg.src = data.cars[i].carsImg[j].img;
+        }
 
         const carStats = document.createElement('div');
         carsWrapper.appendChild(carStats);
@@ -68,7 +49,33 @@ fetch("/assets/json/cars.json")
 
         const carLogo = document.createElement('img');
         carBrand.appendChild(carLogo);
-        carLogo.src =  data.cars[i].logo;
+        carLogo.src = data.cars[i].logo;
+
+        rightArrow.addEventListener('click', () => {
+            sumMin++;
+            if(sumMin === 3) {
+                carsImg.src = data.cars[i].carsImg[sumMin].img;
+            }
+            if (sumMin >= 4) {
+                sumMin = 0;
+                carsImg.src = data.cars[i].carsImg[sumMin].img;
+            } else {
+                carsImg.src = data.cars[i].carsImg[sumMin].img;
+            }
+        });
+
+        leftArrow.addEventListener('click', () => {
+            if(sumMin === 0) {
+                carsImg.src = data.cars[i].carsImg[sumMin].img;
+            }
+            if (sumMin <= 0) {
+                sumMin = 3;
+                carsImg.src = data.cars[i].carsImg[sumMin].img;
+            } else {
+                sumMin--;
+                carsImg.src = data.cars[i].carsImg[sumMin].img;
+            }
+        })
     }
 })
 .catch((err) => {
