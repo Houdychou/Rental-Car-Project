@@ -1,17 +1,3 @@
-const menuBtn = document.querySelector('.nav_menu_btn i');
-const navLinks = document.querySelector('.nav_links');
-
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle("open");
-    const isOpen = navLinks.classList.contains("open");
-    menuBtn.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-});
-
-navLinks.addEventListener('click', () => {
-    navLinks.classList.remove("open");
-    menuBtn.setAttribute("class", "ri-menu-line");
-});
-
 const scrollRevealOption = {
     origin: "bottom",
     distance: "50px",

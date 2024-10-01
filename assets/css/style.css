@@ -717,6 +717,7 @@ footer {
 }
 
 .darkmode {
+  color: var(--extra-light) !important;
   cursor: pointer;
   font-size: 20px;
 }

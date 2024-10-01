@@ -1,4 +1,4 @@
-const darkModeIcon = document.querySelector('.darkmode i');
+const darkModeIcon = document.querySelector('.darkmod');
 const body = document.querySelector('body');
 const header = document.querySelector('header');
 
@@ -11,6 +11,20 @@ const h1 = document.querySelector('h1');
 const headerForm = document.querySelector('header form');
 const headerLabel = document.querySelectorAll('label');
 const headerInputs = document.querySelectorAll('header input');
+
+const menuBtn = document.querySelector('.nav_menu_btn i');
+const navLinks = document.querySelector('.nav_links');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.contains("open");
+    menuBtn.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+});
+
+navLinks.addEventListener('click', () => {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("class", "ri-menu-line");
+});
 
 darkModeIcon.addEventListener('click', () => {
     body.classList.toggle('body_darkmode');
