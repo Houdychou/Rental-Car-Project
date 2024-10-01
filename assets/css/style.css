@@ -745,6 +745,7 @@ footer {
 }
 
 .input_darkmode {
+  color: var(--white) !important;
   background-color: #202020 !important;
 }
 

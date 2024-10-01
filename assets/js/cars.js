@@ -81,3 +81,11 @@ fetch("/assets/json/cars.json")
 .catch((err) => {
     console.log(err);
 })
+
+
+const burgerMenu = document.querySelector('.nav_menu_btn i');
+burgerMenu.addEventListener('click', () => {
+    ul.classList.toggle('open');
+    burgerMenu.classList.toggle('ri-menu-line');
+    burgerMenu.classList.toggle('ri-close-line');
+});

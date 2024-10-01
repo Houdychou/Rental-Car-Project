@@ -1,17 +1,15 @@
-const menuBtn = document.querySelector('nav_menu_btn');
+const menuBtn = document.querySelector('.nav_menu_btn i');
 const navLinks = document.querySelector('.nav_links');
-const menuBtnIcon = document.querySelector('i');
 
-menuBtnIcon.addEventListener('click', () => {
+menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle("open");
-
     const isOpen = navLinks.classList.contains("open");
-    menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+    menuBtn.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
 navLinks.addEventListener('click', () => {
     navLinks.classList.remove("open");
-    menuBtnIcon.setAttribute("class", "ri-menu-line");
+    menuBtn.setAttribute("class", "ri-menu-line");
 });
 
 const scrollRevealOption = {
